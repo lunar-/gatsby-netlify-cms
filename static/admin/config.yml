@@ -2,8 +2,8 @@ backend:
   # name: test-repo
   name: github
   repo: lunar-/gatsby-netlify-cms
-  branch: tutorial    # Branch to update
-  base_url: http://localhost:3000 # Path to ext auth provider
+  branch: tutorial
+  base_url: http://localhost:3000
 
 media_folder: static/assets
 public_folder: assets
