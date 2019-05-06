@@ -2,7 +2,7 @@ backend:
   # name: test-repo
   name: github
   repo: lunar-/gatsby-netlify-cms
-  branch: tutorial
+  branch: blog
   base_url: http://localhost:3000
 
 media_folder: static/assets
