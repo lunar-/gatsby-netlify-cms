@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 
 export default function blogTemplate({ data }) {
   const { markdownRemark } = data
+  console.log(data)
   const { frontmatter, html } = markdownRemark
 
   return (
@@ -15,8 +16,9 @@ export default function blogTemplate({ data }) {
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
       html
       frontmatter {
         path

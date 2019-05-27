@@ -5,7 +5,7 @@ backend:
   branch: blog
   base_url: http://localhost:3000
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 media_folder: static/assets
 public_folder: assets
 
@@ -14,12 +14,13 @@ collections:
     label: Blog
     folder: blog
     create: true
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blogTemplate"}
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: "path", label: "Path" }
+      - { name: "date", label: "Date", widget: "date" }
+      - { name: "title", label: "Title" }
+      - { name: "body", label: "Body", widget: "markdown" }
 
   - name: pages
     label: Pages
@@ -37,5 +38,29 @@ collections:
                 {label: Place, name: place, widget: string},
                 {label: Caption, name: caption, widget: string},
                 {label: Link, name: link, widget: string}
+              ]
+            }
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: TeamMember, name: teamMember, widget: list,
+              fields: [
+                {label: Dept, name: dept, widget: string},
+                {label: Member, name: member, widget: list,
+                  fields: [
+                    {label: Image, name: image, widget: image},
+                    {label: Name, name: name, widget: string},
+                    {label: Position, name: position, widget: string},
+                    {label: Info, name: info, widget: string},
+                    {label: Link, name: link, widget: list,
+                      fields: [
+                        {label: Title, name: title, widget: string},
+                        {label: Url, name: url, widget: string}
+                      ]
+                    }
+                  ]
+                }
               ]
             }

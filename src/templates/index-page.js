@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
     </div>
     <div style={{ background: '#f0f0f0' }}>
       <h3>{data.markdownRemark.frontmatter.conference.title}</h3>
-      <img src="https://www.lunit.io/static/img/home_AACR2019.png"
+      <img src={data.markdownRemark.frontmatter.conference.image}
         style={{ width: '80%' }} />
     </div>
     <div>
