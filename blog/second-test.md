@@ -1,4 +1,5 @@
 ---
+templateKey: blogTemplate
 path: /secondTest
 date: 2019-05-06T07:26:46.409Z
 title: Second Test

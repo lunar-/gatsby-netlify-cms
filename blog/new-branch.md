@@ -1,4 +1,5 @@
 ---
+templateKey: blogTemplate
 path: /test2
 date: 2019-05-06T07:50:24.825Z
 title: new branch
